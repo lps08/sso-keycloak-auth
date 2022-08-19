@@ -1,0 +1,6 @@
+# Sensitive files
+.env
+
+# Docker files
+Dockerfile
+docker-compose.yml
