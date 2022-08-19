@@ -1,23 +1,27 @@
+
 ## Installation 
+
+Install and run the project.
 
 Clone the projet:
 
 ```bash 
-  git@github.com:motnip/keycloak-js-login.git
-  cd keycloak-js-login
+  git clone https://github.com/lps08/sso-keycloak-auth.git
+  cd sso-keycloak-auth
 ```
 
 ### Keycloak server
 
-Run the keycloak server.
-From the projetc root folder run:
 ```bash 
   docker-compose up -d
 ```    
+Import the configuration:
 
 Open the browser and go to localhost:8080
 Click on "Administration console". Log in with user admin and password admin.
 (Don not use this in production! :D)
+
+Now it is time to add a Realm for our application.
 
 From "Administration console" page:
 - On the left side menu click on master. 
@@ -42,4 +46,10 @@ Now you need to assign a role to each user:
 - Assign the role "user" to user@acme.com 
 - Assign the role "manager" to manager@acme.com.
 
-Open your browser and go to localhost:3000.
+
+## Acknowledgements
+
+ - [keycloak](https://www.keycloak.org/)
+ - [KeyCloak: Creating a realm and a user](https://www.keycloak.org/docs/latest/getting_started/index.html#creating-a-realm-and-a-user)
+ - [KeyCloak: Javascript adapter](https://www.keycloak.org/docs/latest/securing_apps/#_javascript_adapter)
+ - [Keycloak clients and roles](https://tomas-pinto.medium.com/keycloak-clients-and-roles-a-tutorial-b334147f1dbd)
